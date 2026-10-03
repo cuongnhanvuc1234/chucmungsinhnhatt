@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chúc mừng sinh nhật! 🎂</title>
+<!-- Font chữ: Pacifico (tiêu đề) + Quicksand (nội dung) -->
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="stars"></canvas>
+<div id="floaters"></div>
+<div id="rain"></div>
+
+<!-- Nút bật/tắt nhạc -->
+<button id="musicBtn" aria-label="Bật/tắt nhạc">🔇</button>
+<section class="page active" id="p1">
+  <h1 class="title">Gửi tặng bạn một điều bất ngờ đặc biệt! 🎁</h1>
+  <div class="gift" id="gift" role="button" tabindex="0" aria-label="Mở hộp quà">
+    <div class="lid"><i></i></div>
+    <div class="box"><i></i></div>
+    <span class="spark s1">✦</span><span class="spark s2">✧</span><span class="spark s3">✦</span>
+  </div>
+  <p class="hint">Chạm vào hộp quà để mở nhé</p>
+</section>
+<section class="page" id="p2">
+  <h1 class="title"><span id="typing"></span></h1>
+  <div class="cake">
+    <div class="candle" id="candle" role="button" tabindex="0" aria-label="Thổi nến">
+      <div class="flame"></div><div class="smoke"></div><div class="wick"></div>
+    </div>
+    <div class="tier t1"></div><div class="tier t2"></div><div class="tier t3"></div>
+    <div class="plate"></div>
+  </div>
+  <p class="hint" id="cakeHint">Chạm vào ngọn nến để thổi nến 🕯️</p>
+  <button class="btn hidden" id="to3">Xem tiếp những lời chúc dành cho bạn 💌</button>
+</section>
+<section class="page" id="p3">
+  <h1 class="title">happy birthday📸</h1>
+  <div class="album">
+    <figure class="polaroid" style="--r:-6deg">
+      <img src="https://images.unsplash.com/photo-1558636508-e0db3814bd1d?w=500&q=80" alt="Bánh sinh nhật" onerror="this.style.visibility='hidden'">
+      <figcaption>sinh nhật vui vẻ🍰</figcaption>
+    </figure>
+    <figure class="polaroid" style="--r:4deg">
+      <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=500&q=80" alt="Bong bóng" onerror="this.style.visibility='hidden'">
+      <figcaption>Mong bạn luôn nhẹ nhàng bay cao 🎈</figcaption>
+    </figure>
+    <figure class="polaroid" style="--r:-3deg">
+      <img src="https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w=500&q=80" alt="Quà tặng" onerror="this.style.visibility='hidden'">
+      <figcaption>Bạn xứng đáng với mọi điều tuyệt vời 🎁</figcaption>
+    </figure>
+  </div>
+  <button class="btn" id="to4">Đọc bức thư đặc biệt ✉️</button>
+</section>
+<section class="page" id="p4">
+  <div class="envelope" id="envelope">
+    <div class="flap"></div>
+    <div class="letter">
+      <!-- THAY LỜI CHÚC Ở ĐÂY -->
+      <h2>Gửi <span class="name"></span>,</h2>
+     <p>"Happy Birthday! Chúc bạn tuổi mới xinh đẹp hơn, giỏi giang hơn và luôn có thật nhiều năng lượng tích cực! 🌸💖"<p>
+     </p>
+      <p class="sign">— Người bạn của bạn</p>
+    </div>
+  </div>
+  <button class="btn" id="to5">Nhận món quà cuối cùng 🌟</button>
+</section>
+<section class="page" id="p5">
+  <div class="card">
+    <h1 class="title">Mọi điều tốt đẹp nhất sẽ đến với bạn trong tuổi mới này! ✨</h1>
+    <button class="btn" id="restart">Xem lại</button>
+  </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/canvas-confetti/1.9.3/confetti.browser.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
